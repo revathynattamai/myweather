@@ -20,4 +20,6 @@ module.exports = {
     template: 'templates/index.ejs',
     fileName: '.manifest.json',
   },
+  port: 5000,
+  dist
 };
