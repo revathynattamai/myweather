@@ -5,6 +5,7 @@ const reports = `${outputDir}_reports/`;
 const coverageDir = `${reports}_coverage/`;
 const src = './src';
 const eslintDir = `./${reports}/_eslint/`;
+const docs = `${outputDir}_docs/`;
 
 module.exports = {
   webpack: {
@@ -25,6 +26,8 @@ module.exports = {
   },
   port: 5000,
   dist,
+  src,
+  docs,
   eslintDir,
   karma: {
     browsers: ['PhantomJS'],
@@ -55,5 +58,14 @@ module.exports = {
     preprocessors: {
       './**/*.test.js': ['webpack', 'coverage'],
     },
+  },
+  esdoc: {
+    title: 'bartrr',
+    description: '',
+    repository: '',
+    site: '',
+    twitter: '',
+    image: '',
+    interfaces: ['describe', 'it', 'context', 'suite', 'test'],
   },
 };
